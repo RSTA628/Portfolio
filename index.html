@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN" data-motion="on">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="个人作品集网站">
+  <meta name="theme-color" content="#f1f1ef">
+  <title>你的名字 — 作品与实验</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260930be">
+  <script src="media.js?v=20260930at" defer></script>
+  <script src="content.js?v=20260930at" defer></script>
+  <script src="content-overrides.js?v=20260930at" defer></script>
+  <script src="appearance-overrides.js?v=20260930at" defer></script>
+  <script src="app.js?v=20260930at" defer></script>
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="topbar" aria-label="主导航">
+    <a class="brand-mark" href="#top" aria-label="返回首页" id="brandMark">YN</a>
+    <nav class="nav-pills" aria-label="页面导航">
+      <a class="nav-pill" href="#work"><span id="navWorkLabel">作品</span><span class="icon-swap" aria-hidden="true">↗</span></a>
+      <a class="nav-pill" href="#about"><span id="navAboutLabel">关于</span><span class="icon-swap" aria-hidden="true">↗</span></a>
+      <a class="nav-pill" href="#contact"><span id="navContactLabel">联系</span><span class="icon-swap" aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="topbar-tools">
+      <span class="availability-pill"><span class="status-dot" aria-hidden="true"></span><span id="availability">可接受新项目</span></span>
+      <button class="availability-pill language-toggle" id="languageToggle" type="button" aria-label="切换语言显示">EN</button>
+    </div>
+  </header>
+  <div class="topbar-fade" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="showcase" id="top" aria-labelledby="showcaseTitle">
+      <div class="showcase-slides" id="heroSlides" aria-hidden="true"></div>
+      <div class="showcase-shade" aria-hidden="true"></div>
+      <div class="showcase-ui">
+        <div class="showcase-topline">
+          <p id="showcaseTopline"><span id="toplineLabel">PORTFOLIO /</span> <span id="yearLabel">2021 to --</span></p>
+          <p id="heroLocation">你的城市，中国</p>
+        </div>
+        <div class="showcase-copy">
+          <p class="showcase-kicker" id="heroRole">独立设计师 / 创意开发者</p>
+          <h1 id="showcaseTitle"><span id="showcaseLead">把复杂的想法，</span><span id="showcaseAccent">做成清晰的体验。</span></h1>
+          <p class="showcase-intro" id="siteIntro"></p>
+        </div>
+        <div class="showcase-bottom">
+          <div class="showcase-caption">
+            <p class="showcase-index" id="heroSlideIndex">01 / 04</p>
+            <p class="showcase-title" id="heroSlideTitle">项目名称 01</p>
+            <p class="showcase-meta" id="heroSlideMeta">产品策略 · 体验设计</p>
+          </div>
+          <div class="showcase-controls" id="heroIndicators" aria-label="切换首屏作品"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works-section" id="work" aria-labelledby="workTitle">
+      <header class="section-heading reveal">
+        <p class="section-label" id="workLabel">SELECTED WORKS</p>
+        <h2 id="workTitle">精选作品</h2>
+      </header>
+
+      <div class="filters reveal" id="projectFilters" role="group" aria-label="筛选作品"></div>
+      <div class="work-grid" id="projectGrid" aria-live="polite"></div>
+    </section>
+    <section class="about-section" id="about" aria-labelledby="aboutTitle">
+      <header class="about-heading reveal">
+        <p class="section-label" id="aboutLabel">ABOUT / APPROACH</p>
+        <h2 id="aboutTitle"><span id="aboutTitleLead">我做的不只是</span><span id="aboutTitleAccent">“看起来不错”。</span></h2>
+      </header>
+      <div class="about-layout">
+        <p class="about-lead reveal" id="aboutLead"></p>
+        <div class="about-copy reveal">
+          <div>
+            <p class="detail-label" id="aboutApproachLabel">工作方式</p>
+            <p id="aboutApproach"></p>
+          </div>
+          <div>
+            <p class="detail-label" id="aboutSkillsLabel">能力范围</p>
+            <ul class="skill-list" id="skillList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-label="联系">
+      <div class="contact-panel reveal">
+        <div class="contact-topline">
+          <p class="section-label" id="contactLabel">CONTACT / 04</p>
+          <span class="contact-mark" aria-hidden="true">↘</span>
+        </div>
+        <p id="contactText"></p>
+        <a class="contact-mail" id="contactLink" href="mailto:hello@example.com"><span id="contactEmail">hello@example.com</span><span aria-hidden="true">↗</span></a>
+        <div class="socials" id="socialLinks" aria-label="社交链接"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="currentYear"></span> <span id="footerName">你的名字</span></p>
+    <a href="#top">回到顶部 ↑</a>
+  </footer>
+
+  <dialog class="project-dialog" id="projectDialog">
+    <div class="dialog-backdrop" data-close-dialog></div>
+    <article class="dialog-card" aria-labelledby="dialogTitle">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="关闭项目详情">×</button>
+      <div class="dialog-media" id="dialogMedia" aria-hidden="true"></div>
+      <div class="dialog-content">
+        <p class="section-label" id="dialogMeta"></p>
+        <h2 id="dialogTitle"></h2>
+        <p class="dialog-summary" id="dialogSummary"></p>
+        <a class="button button--dark" id="dialogLink" href="#contact">讨论类似项目 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="dialog-gallery" id="dialogGallery" hidden></div>
+    </article>
+  </dialog>
+
+  <noscript><p class="noscript-message">这个作品集需要 JavaScript 来展示作品与动效。</p></noscript>
+</body>
+</html>
+
+
+
