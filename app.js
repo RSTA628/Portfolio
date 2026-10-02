@@ -240,6 +240,7 @@ function applyEnglishContent() {
   const en = data.enText && typeof data.enText === "object" ? data.enText : {};
   const staticText = en.static && typeof en.static === "object" ? en.static : {};
   const pick = (key, fallback) => staticText[key] || fallback;
+  data.pageTitle = pick("textPageTitle", data.pageTitle);
   data.brandName = pick("textBrandName", data.brandName);
   data.brandMark = pick("textBrandMark", data.brandMark);
   data.footerName = pick("textFooterName", data.footerName);
@@ -329,6 +330,8 @@ function applyMediaOverrides() {
     });
     data.brandImage = overrides.brand?.["0"] || null;
     data.contactBackgroundImage = overrides.contact?.["0"] || null;
+    data.resumeZhImage = overrides.resume?.["0"] || null;
+    data.resumeEnImage = overrides.resume?.["1"] || null;
   }
 
   function renderContactBackground() {
@@ -348,7 +351,22 @@ function applyMediaOverrides() {
     }
   }
 
+  function renderResume() {
+    const button = $("#resumeTrigger");
+    const image = $("#resumeImage");
+    const record = getPortfolioLanguage() === "en" ? data.resumeEnImage : data.resumeZhImage;
+    if (button) {
+      button.hidden = !record?.image;
+      button.textContent = getPortfolioLanguage() === "en" ? "Resume ↗" : "查看简历 ↗";
+    }
+    if (image && record?.image) {
+      image.src = record.image;
+      image.alt = record.alt || (getPortfolioLanguage() === "en" ? "Resume" : "简历");
+    }
+  }
+
   function renderIdentity() {
+    document.title = data.pageTitle || "你的名字 — 作品与实验";
     const brandElement = $("#brandMark");
     const brandImage = data.brandImage;
     if (brandElement && brandImage?.image) {
@@ -700,6 +718,16 @@ function applyMediaOverrides() {
     dialog.showModal();
   }
 
+  function bindResumeDialog() {
+    const dialog = $("#resumeDialog");
+    const trigger = $("#resumeTrigger");
+    if (!dialog || !trigger || typeof dialog.showModal !== "function") return;
+    trigger.addEventListener("click", () => dialog.showModal());
+    $$("[data-close-resume]", dialog).forEach((element) => element.addEventListener("click", () => dialog.close()));
+    dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener("cancel", (event) => { event.preventDefault(); dialog.close(); });
+  }
+
   function bindDialog() {
     const dialog = $("#projectDialog");
     if (!dialog) return;
@@ -796,6 +824,7 @@ function applyMediaOverrides() {
     applyEnglishContent();
     applyMediaOverrides();
     renderIdentity();
+    renderResume();
     renderContactBackground();
     renderHeroCarousel();
     renderWorksHeader();
@@ -803,6 +832,7 @@ function applyMediaOverrides() {
     renderAbout();
     renderSocials();
     bindDialog();
+    bindResumeDialog();
     bindScrollState();
     initReveal();
     requestAnimationFrame(() => document.body.classList.remove("is-loading"));

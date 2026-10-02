@@ -4,6 +4,7 @@
  */
 window.contentOverrides = {
   "version": 1,
+  "pageTitle": "RSTA_PORTFOLIO",
   "brandName": "冉思达",
   "topline": {
     "label": "代表作 /",
@@ -118,7 +119,7 @@ window.contentOverrides = {
     {
       "id": "project-d0ef2d14-6f5f-4ea9-9e1f-ce7307561774",
       "title": "Mersey Soul",
-      "summary": "",
+      "summary": "Mersey Soul 位于利物浦 Princes Dock 的默西河岸，项目试图将曾经的全球贸易港口转化为新的滨水文化目的地，重新连接城市、河流与公共生活。设计以主剧场和露天剧场为核心，灵感来自鲸鱼的运动、形态与身体行为。建筑群通过“鲸鱼”的潜游、呼吸、鳍、眼睛、尾部与水花等意象，形成一组具有雕塑感的文化综合体，容纳表演、展览与公共活动，并在滨水区域建立新的城市地标。",
       "category": "方案",
       "layout": {
         "col": 11,
@@ -204,6 +205,19 @@ window.contentOverrides = {
       "tags": [
         "2021 | 成都，中国"
       ]
+    },
+    {
+      "id": "project-92f20947-c9b1-4a65-911b-3ab4f276ae52",
+      "title": "Morphosis",
+      "summary": "请填写项目说明。",
+      "category": "实习",
+      "layout": {
+        "col": 3,
+        "row": 2,
+        "colSpan": 11,
+        "rowSpan": 15
+      },
+      "tags": []
     }
   ],
   "about": {
@@ -215,19 +229,20 @@ window.contentOverrides = {
     "skills": [
       "Rhino",
       "Grasshopper",
-      "Su",
-      "Adobe",
-      "Ue",
+      "Revit",
+      "SetchUp",
+      "Ureal Engine",
       "Houdini",
-      "Cad",
+      "Adobe SuiteCad",
       "Blender",
-      "Office",
-      "Vibe coding",
       "Vray",
       "D5",
+      "Enscape",
+      "Office Suite",
+      "Vibe Coding",
       "Ai rendering"
     ],
-    "lead": "\n我是一名建筑设计与研究者，目前就读于哥伦比亚大学GSAPP。我的建筑学习与实践始于2021年，曾在西交利物浦大学和利物浦大学学习建筑，并在研究生阶段继续探索建筑设计、环境性能、计算设计与材料研究。\n\n我的实践经历包括在 Morphosis、中建西南院等建筑单位参与设计工作，并持续关注建筑与社会、环境及日常生活之间的关系。近年来，他的研究逐渐转向材料再利用、生态系统、建筑建造以及探索如何利用已有的材料、环境条件与非人为因素形成新的建筑可能。\n\n我的研究涵盖建筑设计、计算设计、实体模型与材料实验，并关注建筑如何在具体的社会、环境和物质条件中产生作用。",
+    "lead": "\n我是一名建筑设计与研究者，目前就读于哥伦比亚大学GSAPP。我的建筑学习与实践始于2021年，曾在西交利物浦大学和利物浦大学学习建筑，并在研究生阶段继续探索建筑设计、环境性能、计算设计与材料研究。\n\n我的实践经历包括在 Morphosis、中建西南院等建筑单位参与设计工作，并持续关注建筑与社会、环境及日常生活之间的关系。近年来，我的研究逐渐转向材料再利用、生态系统、建筑建造以及探索如何利用已有的材料、环境条件与非人为因素形成新的建筑可能。\n\n我的研究涵盖建筑设计、计算设计、实体模型与材料实验，并关注建筑如何在具体的社会、环境和物质条件中产生作用。",
     "approach": "线下/远程/混合"
   },
   "contact": {
@@ -276,7 +291,8 @@ window.contentOverrides = {
       "textContactText": "REACH OUT\n  IT'LL BE WORTH YOUR TIME",
       "textNavWork": "WORKS",
       "textNavAbout": "ABOUT",
-      "textNavContact": "CONTACT"
+      "textNavContact": "CONTACT",
+      "textPageTitle": ""
     },
     "heroSlides": {
       "hero-01": {
@@ -331,7 +347,7 @@ window.contentOverrides = {
       },
       "project-d0ef2d14-6f5f-4ea9-9e1f-ce7307561774": {
         "title": "",
-        "summary": "",
+        "summary": "Mersey Soul is located on the River Mersey at Princes Dock, Liverpool. The project transforms a former global trading hub into a new waterfront cultural destination, reconnecting the city, the river, and public life. Centered on a main theatre and an open-air theatre, the design draws inspiration from the movement, form, and behavior of whales. Through architectural interpretations of diving, breathing, fins, eyes, tails, and splashes, the project forms a sculptural cultural complex that integrates performance, exhibition, and public activities while creating a distinctive landmark along the waterfront.",
         "tags": [
           "2024 | Liverpool，UK"
         ]
@@ -370,6 +386,11 @@ window.contentOverrides = {
         "tags": [
           "2021 | Chengdu，China"
         ]
+      },
+      "project-92f20947-c9b1-4a65-911b-3ab4f276ae52": {
+        "title": "",
+        "summary": "",
+        "tags": []
       }
     },
     "filters": {

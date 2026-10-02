@@ -6,6 +6,7 @@
  * 发布前必须替换，不能用演示内容冒充真实经历。
  */
 window.siteData = {
+  pageTitle: "你的名字 — 作品与实验",
   brandName: "冉思达",
   footerName: "冉思达",
   brandMark: "Sida",
