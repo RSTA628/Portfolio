@@ -2144,3 +2144,27 @@ body,
     bottom: 24px;
   }
 }
+
+
+/* 详情弹窗使用作品模块独立样式 */
+.dialog-content #dialogMeta {
+  font-family: var(--dialog-font, var(--project-font, var(--sans)));
+  font-size: var(--dialog-label-size, var(--project-label-size, var(--project-text-size, 10px)));
+  font-weight: var(--dialog-label-weight, var(--project-label-weight, var(--project-text-weight, 400)));
+  font-style: var(--dialog-label-style, var(--project-label-style, var(--project-text-style, normal)));
+  color: var(--dialog-label-color, var(--project-label-color, var(--project-text-color, var(--muted))));
+}
+.dialog-content #dialogTitle {
+  font-family: var(--dialog-font, var(--project-font, var(--sans)));
+  font-size: var(--dialog-title-size, calc(clamp(38px, 5vw, 72px) * var(--project-title-scale, 1)));
+  font-weight: var(--dialog-title-weight, var(--project-title-weight, 300));
+  font-style: var(--dialog-title-style, var(--project-title-style, normal));
+  color: var(--dialog-title-color, var(--project-title-color, var(--ink)));
+}
+.dialog-content #dialogSummary {
+  font-family: var(--dialog-font, var(--project-font, var(--sans)));
+  font-size: var(--dialog-body-size, var(--project-text-size, 14px));
+  font-weight: var(--dialog-body-weight, var(--project-text-weight, 400));
+  font-style: var(--dialog-body-style, var(--project-text-style, normal));
+  color: var(--dialog-body-color, var(--project-text-color, var(--project-text, var(--muted))));
+}

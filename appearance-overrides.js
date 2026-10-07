@@ -90,7 +90,15 @@ window.portfolioAppearance = {
       "approachSize": 16,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#191919"
+      "approachColor": "#191919",
+      "dialogTitleSize": 16,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#191919",
+      "dialogBodySize": 16,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#191919"
     },
     "hero": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -117,7 +125,15 @@ window.portfolioAppearance = {
       "approachSize": 17,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#f9f9f7"
+      "approachColor": "#f9f9f7",
+      "dialogTitleSize": 17,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#f9f9f7",
+      "dialogBodySize": 17,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#f9f9f7"
     },
     "carousel": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -144,7 +160,15 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "italic",
-      "approachColor": "#f9f9f7"
+      "approachColor": "#f9f9f7",
+      "dialogTitleSize": 10,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "italic",
+      "dialogTitleColor": "#f9f9f7",
+      "dialogBodySize": 10,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "italic",
+      "dialogBodyColor": "#f9f9f7"
     },
     "projects": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -171,7 +195,50 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#ffffff"
+      "approachColor": "#ffffff",
+      "dialogTitleSize": 10,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#ffffff",
+      "dialogBodySize": 10,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#ffffff"
+    },
+    "dialog": {
+      "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+      "titleScale": 100,
+      "titleWeight": 300,
+      "titleStyle": "normal",
+      "titleColor": "#191919",
+      "textSize": 14,
+      "textWeight": 400,
+      "textStyle": "normal",
+      "textColor": "#65635d",
+      "labelSize": 10,
+      "labelWeight": 400,
+      "labelStyle": "normal",
+      "labelColor": "#777772",
+      "subheadingSize": 14,
+      "subheadingWeight": 400,
+      "subheadingStyle": "normal",
+      "subheadingColor": "#65635d",
+      "leadSize": 14,
+      "leadWeight": 400,
+      "leadStyle": "normal",
+      "leadColor": "#65635d",
+      "approachSize": 14,
+      "approachWeight": 400,
+      "approachStyle": "normal",
+      "approachColor": "#65635d",
+      "dialogTitleSize": 25,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#191919",
+      "dialogBodySize": 12,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#8c8c8c"
     },
     "about": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -198,7 +265,15 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#8c8c8c"
+      "approachColor": "#8c8c8c",
+      "dialogTitleSize": 16,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#65635d",
+      "dialogBodySize": 16,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#65635d"
     },
     "contact": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -225,7 +300,15 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#f9f9f7"
+      "approachColor": "#f9f9f7",
+      "dialogTitleSize": 10,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#f9f9f7",
+      "dialogBodySize": 10,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#f9f9f7"
     },
     "filters": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -252,7 +335,15 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#565654"
+      "approachColor": "#565654",
+      "dialogTitleSize": 10,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#565654",
+      "dialogBodySize": 10,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#565654"
     },
     "topline": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -279,7 +370,15 @@ window.portfolioAppearance = {
       "approachSize": 10,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#ffffff"
+      "approachColor": "#ffffff",
+      "dialogTitleSize": 10,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#ffffff",
+      "dialogBodySize": 10,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#ffffff"
     },
     "availability": {
       "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
@@ -306,7 +405,15 @@ window.portfolioAppearance = {
       "approachSize": 12,
       "approachWeight": 400,
       "approachStyle": "normal",
-      "approachColor": "#000000"
+      "approachColor": "#000000",
+      "dialogTitleSize": 12,
+      "dialogTitleWeight": 400,
+      "dialogTitleStyle": "normal",
+      "dialogTitleColor": "#000000",
+      "dialogBodySize": 12,
+      "dialogBodyWeight": 400,
+      "dialogBodyStyle": "normal",
+      "dialogBodyColor": "#000000"
     }
   }
 };

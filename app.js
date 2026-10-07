@@ -163,7 +163,7 @@ function applyAppearanceOverrides() {
   if (Number.isFinite(Number(appearance.brandRadius))) rootStyle.setProperty("--brand-radius", Math.min(999, Math.max(0, Number(appearance.brandRadius))) + "px");
 
   const moduleStyles = appearance.moduleStyles || {};
-  const modulePrefixes = { basic: "basic", topline: "topline", availability: "availability", hero: "hero", carousel: "carousel", projects: "project", about: "about", contact: "contact", filters: "filters" };
+  const modulePrefixes = { basic: "basic", topline: "topline", availability: "availability", hero: "hero", carousel: "carousel", projects: "project", dialog: "dialog", about: "about", contact: "contact", filters: "filters" };
   Object.entries(modulePrefixes).forEach(([sourceKey, prefix]) => {
     const style = moduleStyles[sourceKey];
     if (!style) return;
@@ -176,13 +176,14 @@ function applyAppearanceOverrides() {
     if (Number.isFinite(Number(style.textWeight))) rootStyle.setProperty("--" + prefix + "-text-weight", String(Number(style.textWeight)));
     rootStyle.setProperty("--" + prefix + "-text-style", style.textStyle === "italic" ? "italic" : "normal");
     if (/^#[0-9a-f]{6}$/i.test(style.textColor || "")) rootStyle.setProperty("--" + prefix + "-text-color", style.textColor);
-    ["label", "subheading", "lead", "approach"].forEach((part) => {
+    ["label", "subheading", "lead", "approach", "dialogTitle", "dialogBody"].forEach((part) => {
+      const cssPart = part === "dialogTitle" ? "title" : part === "dialogBody" ? "body" : part;
       const size = Number(style[part + "Size"]);
-      if (Number.isFinite(size)) rootStyle.setProperty("--" + prefix + "-" + part + "-size", Math.min(32, Math.max(8, size)) + "px");
+      if (Number.isFinite(size)) rootStyle.setProperty("--" + prefix + "-" + cssPart + "-size", Math.min(32, Math.max(8, size)) + "px");
       const weight = Number(style[part + "Weight"]);
-      if (Number.isFinite(weight)) rootStyle.setProperty("--" + prefix + "-" + part + "-weight", String(weight));
-      rootStyle.setProperty("--" + prefix + "-" + part + "-style", style[part + "Style"] === "italic" ? "italic" : "normal");
-      if (/^#[0-9a-f]{6}$/i.test(style[part + "Color"] || "")) rootStyle.setProperty("--" + prefix + "-" + part + "-color", style[part + "Color"]);
+      if (Number.isFinite(weight)) rootStyle.setProperty("--" + prefix + "-" + cssPart + "-weight", String(weight));
+      rootStyle.setProperty("--" + prefix + "-" + cssPart + "-style", style[part + "Style"] === "italic" ? "italic" : "normal");
+      if (/^#[0-9a-f]{6}$/i.test(style[part + "Color"] || "")) rootStyle.setProperty("--" + prefix + "-" + cssPart + "-color", style[part + "Color"]);
     });
   });
 
@@ -681,10 +682,8 @@ function applyMediaOverrides() {
     if (!dialog || !dialogMedia || typeof dialog.showModal !== "function") return;
 
     lastFocusedElement = document.activeElement;
-    setText("#dialogMeta", `${project.number || "PROJECT"} / ${project.category || "案例"}`);
     setText("#dialogTitle", project.title);
     setText("#dialogSummary", project.summary);
-    setHref($("#dialogLink"), project.link || "#contact");
 
     const builtMedia = buildMedia(project, "dialog-media");
     dialogMedia.replaceChildren(...builtMedia.childNodes);
